@@ -1,0 +1,28 @@
+.fullBody {
+    display: flex;
+}
+li {
+    list-style: none;
+}
+.sidebar-body {
+    width: 206px;
+    height: 100vh;
+    border: 1px solid;
+    padding: 20px 10px;
+}
+.logo {
+    width: 100%;
+    text-align: center;
+}
+.logo > img {
+    width: 100px;
+}
+.sidebar-body  ul {
+    padding-top: 50px;
+}
+a {
+    text-decoration: none;
+}
+.sidebar-body li a{
+    color: black;
+}
