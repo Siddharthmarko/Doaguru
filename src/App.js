@@ -1,25 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Route, Routes, useLocation } from "react-router-dom";
-import Basic from './pages/basic';
-import Other from './pages/other';
 import Sidebar from './pages/sidebar';
+import Dashboard from './pages/dashboard';
+import Login from './pages/login';
 import './App.css';
 
 const App = () => {
+  let [auth,SetAuth] = useState(true)
+
+  let aut = ()=>{
+    SetAuth(false)
+  }
+
+  if (auth) {
+    return <Login aut={aut}/>
+  } 
   return (
     <Routes>
       <Route path="/" Component={Sidebar}>
-        <Route
-          path="basic"
-          Component={Basic}
+        <Route index
+          path="career"
+          Component={Dashboard}
         />
         <Route
-          path="other"
-          Component={Other}
+          path="contact"
+          Component={Dashboard}
         />
       </Route>
     </Routes>
   );
 }
 
-export default Ap
+export default App;
