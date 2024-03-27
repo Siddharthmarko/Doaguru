@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Routes, useLocation } from "react-router-dom";
-import Basic from './compo/basic';
-import Other from './compo/other';
-import Sidebar from './compo/sidebar';
+import Basic from './pages/basic';
+import Other from './pages/other';
+import Sidebar from './pages/sidebar';
 import './App.css';
 
 const App = () => {
